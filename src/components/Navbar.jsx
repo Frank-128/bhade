@@ -3,17 +3,24 @@ import {
   Logout,
   Menu,
   Notifications,
-  Search,
+  Search, Settings,
 } from "@mui/icons-material";
 import { Badge } from "@mui/material";
-import React, { useState } from "react";
+import {useState} from "react";
+import {useNavigate} from 'react-router-dom';
+import './../app.css'
 
-function Navbar({ isOpen, setIsOpen }) {
+function Navbar({ isOpen, setIsOpen,window,setWindow }) {
+  const navigate = useNavigate();
+
+  const setNotificationWindow=()=>{
+   setWindow(!window);
+  }
   return (
     <div className=" ">
       {/* Navbar for small devices */}
       <div className="bg-slate-200 h-fit  md:hidden sx:w-screen al:w-[23.5rem] flex gap-4 flex-col justify-between p-5 items-center  ">
-        <p>
+        <p onClick={()=>navigate('/')}>
           <b className="text-3xl text-orange-600 cursor-pointer">BHADE</b>
         </p>
         {/* div for search */}
@@ -45,13 +52,18 @@ function Navbar({ isOpen, setIsOpen }) {
             <Badge badgeContent={3}>
               <Notifications style={{ fontSize: "30px" }} />
             </Badge>
-
-            <Logout className="" style={{ fontSize: "30px" }} />
+            <Settings onClick={()=>navigate('/settings')} style={{ fontSize: "30px" }}/>
+            <Logout  style={{ fontSize: "30px" }} />
           </div>
         </div>
       </div>
       {/* Navbar for md devices and above */}
-      <div className="bg-slate-200 h-24  w-full  md:flex al:hidden  justify-between p-5 items-center  ">
+      
+      <div className="skeleton bg-slate-200  h-24  w-full  md:flex al:hidden  justify-between p-5 items-center  ">
+
+      
+        
+
         <div className="flex items-center  ">
           {isOpen ? (
             <Close
@@ -64,7 +76,7 @@ function Navbar({ isOpen, setIsOpen }) {
               className="mr-5 cursor-pointer  "
             />
           )}
-          <p>
+          <p onClick={()=>navigate('/')}>
             <b className="text-3xl text-orange-600 cursor-pointer">BHADE</b>
           </p>
         </div>
@@ -78,16 +90,38 @@ function Navbar({ isOpen, setIsOpen }) {
         </div>
         <div className="flex justify-between  gap-4">
           <Badge badgeContent={3}>
-            <Notifications style={{ fontSize: "30px" }} />
+            <Notifications  onClick={setNotificationWindow}  className="cursor-pointer notify" style={{ fontSize: "30px" }} />
           </Badge>
-          
-            <Logout className="mx-1" style={{ fontSize: "30px" }} />
+            <Settings  onClick={()=>navigate('/settings')}  className="cursor-pointer" style={{fontSize:"30px"}}/>
+            <Logout onClick={()=>navigate('./login')} className="mx-1 cursor-pointer" style={{ fontSize: "30px" }} />
+
+            
             
           
         </div>
       </div>
-    </div>
-  );
+      {window? <div className="hidden">
+         NOTIFICATION
+        </div>:
+        <div className="">
+         <div className='w-[32rem] h-[36rem] notify bg-slate-300 absolute z-20  border-4 rounded-xl right-32 top-16 p-4 '>
+                 <p className="text-black text-2xl  font-bold ">NOTIFICATIONS</p>
+                 <div className="gap-y-2 flex-col h-[31rem] flex overflow-y-scroll mt-4 hideScroll">
+                 
+                 <div className=" rounded-3xl border-2 p-8 border-slate-500  text-2xl">  <p>1. franklin saint rent due is by today</p>  </div>
+                 <div className=" rounded-3xl border-2 p-8 border-slate-500  text-2xl">  <p>1. franklin saint rent due is by today</p>  </div>
+                 <div className=" rounded-3xl border-2 p-8 border-slate-500  text-2xl">  <p>1. franklin saint rent due is by today</p>  </div>
+                 <div className=" rounded-3xl border-2 p-8 border-slate-500  text-2xl">  <p>1. franklin saint rent due is by today</p>  </div>
+                 <div className=" rounded-3xl border-2 p-8 border-slate-500  text-2xl">  <p>1. franklin saint rent due is by today</p>  </div>
+                 <div className=" rounded-3xl border-2 p-8 border-slate-500  text-2xl">  <p>1. franklin saint rent due is by today</p>  </div>
+                 <div className=" rounded-3xl border-2 p-8 border-slate-500  text-2xl">  <p>1. franklin saint rent due is by today</p>  </div>
+                 <div className=" rounded-3xl border-2 p-8 border-slate-500  text-2xl">  <p>1. franklin saint rent due is by today</p>  </div>
+                 <div className=" rounded-3xl border-2 p-8 border-slate-500  text-2xl">  <p>1. franklin saint rent due is by today</p>  </div>
+                 <div className=" rounded-3xl border-2 p-8 border-slate-500  text-2xl">  <p>1. franklin saint rent due is by today</p>  </div>
+                  </div>  
+         </div>
+        </div> }
+    </div>)
 }
 
 export default Navbar;
