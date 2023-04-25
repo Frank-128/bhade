@@ -366,3 +366,90 @@ export const blocks = [
     },
      
 ]
+
+export const todos = [
+    {
+        id:'1',
+        status:'complete',
+        message:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate modi ut quae repellendus sequi voluptatibus possimus labore, delectus perferendis! Beatae voluptate veritatis totam placeat molestiae delectus error ad autem amet!',
+        time:'Thur,11.02.2023 08:30am '
+    },
+    {
+        id:'2',
+        status:'complete',
+        message:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate modi ut quae repellendus sequi voluptatibus possimus labore, delectus perferendis! Beatae voluptate veritatis totam placeat molestiae delectus error ad autem amet!',
+        time:'Fri,1.03.2023 08:30am '
+    },
+    {
+        id:'1',
+        status:'pending',
+        message:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate modi ut quae repellendus sequi voluptatibus possimus labore, delectus perferendis! Beatae voluptate veritatis totam placeat molestiae delectus error ad autem amet!',
+        time:'Mon,23.02.2023 10:30am '
+    },
+    {
+        id:'1',
+        status:'complete',
+        message:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate modi ut quae repellendus sequi voluptatibus possimus labore, delectus perferendis! Beatae voluptate veritatis totam placeat molestiae delectus error ad autem amet!',
+        time:'Thur,11.02.2023 08:30am '
+    },
+    {
+        id:'1',
+        status:'pending',
+        message:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate modi ut quae repellendus sequi voluptatibus possimus labore, delectus perferendis! Beatae voluptate veritatis totam placeat molestiae delectus error ad autem amet!',
+        time:'Thur,11.02.2023 08:30am '
+    },
+    {
+        id:'1',
+        status:'complete',
+        message:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate modi ut quae repellendus sequi voluptatibus possimus labore, delectus perferendis! Beatae voluptate veritatis totam placeat molestiae delectus error ad autem amet!',
+        time:'Thur,11.02.2023 08:30am '
+    },
+    {
+        id:'1',
+        status:'complete',
+        message:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate modi ut quae repellendus sequi voluptatibus possimus labore, delectus perferendis! Beatae voluptate veritatis totam placeat molestiae delectus error ad autem amet!',
+        time:'Thur,11.02.2023 08:30am '
+    },
+    {
+        id:'1',
+        status:'complete',
+        message:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate modi ut quae repellendus sequi voluptatibus possimus labore, delectus perferendis! Beatae voluptate veritatis totam placeat molestiae delectus error ad autem amet!',
+        time:'Thur,11.02.2023 08:30am '
+    },
+    {
+        id:'1',
+        status:'pending',
+        message:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate modi ut quae repellendus sequi voluptatibus possimus labore, delectus perferendis! Beatae voluptate veritatis totam placeat molestiae delectus error ad autem amet!',
+        time:'Thur,11.02.2023 08:30am '
+    },
+    {
+        id:'1',
+        status:'pending',
+        message:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate modi ut quae repellendus sequi voluptatibus possimus labore, delectus perferendis! Beatae voluptate veritatis totam placeat molestiae delectus error ad autem amet!',
+        time:'Thur,11.02.2023 08:30am '
+    },
+    {
+        id:'1',
+        status:'pending',
+        message:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate modi ut quae repellendus sequi voluptatibus possimus labore, delectus perferendis! Beatae voluptate veritatis totam placeat molestiae delectus error ad autem amet!',
+        time:'Thur,11.02.2023 08:30am '
+    },
+    {
+        id:'1',
+        status:'pending',
+        message:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate modi ut quae repellendus sequi voluptatibus possimus labore, delectus perferendis! Beatae voluptate veritatis totam placeat molestiae delectus error ad autem amet!',
+        time:'Thur,11.02.2023 08:30am '
+    },
+    {
+        id:'1',
+        status:'complete',
+        message:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate modi ut quae repellendus sequi voluptatibus possimus labore, delectus perferendis! Beatae voluptate veritatis totam placeat molestiae delectus error ad autem amet!',
+        time:'Thur,11.02.2023 08:30am '
+    },
+    {
+        id:'1',
+        status:'pending',
+        message:'testing testing testing',
+        time:'Thur,11.02.2023 08:30am '
+    },
+]
