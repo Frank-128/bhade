@@ -5,7 +5,7 @@ const EditTenant = () => {
     
         <div className="flex items-center justify-center">
           <form className=" flex w-2/3 h-fit bg-slate-300 pb-6 pt-6 flex-col items-center justify-center ">
-             <i><p className="pt-8 font-bold">Fill the form to Add a Tenant</p></i>
+             <i><p className="pt-8 font-bold">Fill the form to Edit a Tenant</p></i>
            <div className="mt-6">
              <label className="block mb-2 font-bold text-sm font-medium " htmlFor="firstname">FirstName:</label>
              <input

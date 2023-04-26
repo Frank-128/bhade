@@ -11,6 +11,12 @@ import {Setting} from "./pages/Setting";
 import { ChangePassword } from "./pages/ChangePassword";
 import { Account } from "./pages/Account";
 import { ChangeEmail } from "./pages/changeEmail";
+import AddTenant from "./pages/AddTenant";
+import EditTenant from "./pages/EditTenant";
+import AddRooms from "./pages/AddRooms";
+import TodoList from "./pages/TodoList";
+import AddBlock from "./pages/AddBlock";
+
 function Skeleton() {
   const [isOpen, setIsOpen] = useState(false);
     const [window, setWindow]= useState(false);
@@ -58,6 +64,11 @@ function App() {
           <Route path="/rooms" element={<Rooms />} />
           <Route path='/tenant/:id' element={<TenantDetail/>} />
           <Route path='/settings' element={<Setting/>}/>
+          <Route path='/addTenant' element={<AddTenant/>} />
+          <Route path='/editTenant' element={<EditTenant/>} />
+          <Route path='/addBlock' element={<AddBlock/>} />
+          <Route path='/addRoom' element={<AddRooms/>} />
+          <Route path='/todolist' element={<TodoList/>} />
           <Route path='/changepassword' element={<ChangePassword/>}/>
           <Route path='/accounts' element={<Account/>}/>
           <Route   path='/changeemail' element={<ChangeEmail/>}/>  
