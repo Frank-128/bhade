@@ -36,9 +36,9 @@ function BlockPage() {
       <div className='pl-5  flex'>
       <div className='flex flex-start    flex-col basis-9/12'>
       <p className='font-bold text-3xl'>Block No {id}</p>
-      <span className='text-xl text-slate-900'>Rooms list</span>
+      <span className='text-xl '>Rooms list</span>
      
-      <div className=' al:w-9/12 md:w-full flex flex-col items-center bg-slate-600 overflow-y-scroll hideScroll h-2/5 rounded-lg  '>
+      <div className=' al:w-9/12 md:w-full flex flex-col items-center overflow-y-scroll bg-slate-600 hideScroll h-[35.4rem] rounded-lg  '>
       {blocks[id-1].Rooms.map((item)=><RoomBlock roomDetails={item} />)}
       </div>
       </div>

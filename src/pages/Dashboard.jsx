@@ -10,7 +10,7 @@ function Dashboard() {
   return (
    <div>
    {/* dashboard for smaller devices from 280 - 767 */}
-     <div className="bg-slate-500 flex h-fit md:hidden al:ml-1 sx:ml-0 w-full   p-5 flex-col hideScroll">
+     <div className="bg-slate-500 flex h-fit  md:hidden al:ml-1 sx:ml-0 w-full   p-5 flex-col hideScroll">
      <BlockRows/>
       <div className="basis-11/12 flex">
         <div className="basis-3/4 ml-6 w-screen al:flex-1  h-3/6 overflow-y-scroll">

@@ -2,9 +2,8 @@ import React from 'react'
 
 function Sidebar({isOpen}) {
   return (
-    <div className={`bg-blue-900    h-screen    overflow-hidden`}>
-frank
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis omnis, ducimus obcaecati excepturi eveniet placeat iure ratione accusamus perferendis maiores ipsum illo iusto laudantium ad. Aperiam beatae natus suscipit eos.
+    <div className={`bg-blue-900   w-auto h-screen   overflow-hidden`}>
+Lorem ipsum dolor sit amet consctetur adipisicing elit. Expedita nulla similique pariatur vel accusamus aspernatur deleniti est, dolorem culpa amet suscipit unde aperiam ea rem quam optio consequuntur eum ullam!
     </div>
   )
 }
