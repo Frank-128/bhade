@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Outlet, Route, Routes, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import BlockPage from "./pages/BlockPage";
@@ -10,7 +10,7 @@ import TenantDetail from "./pages/TenantDetail";
 import {Setting} from "./pages/Setting";
 import { ChangePassword } from "./pages/ChangePassword";
 import { Account } from "./pages/Account";
-import { ChangeEmail } from "./pages/changeEmail";
+import { ChangeEmail } from "./pages/ChangeEmail";
 import AddTenant from "./pages/AddTenant";
 import EditTenant from "./pages/EditTenant";
 import AddRooms from "./pages/AddRooms";
@@ -19,7 +19,14 @@ import AddBlock from "./pages/AddBlock";
 
 function Skeleton() {
   const [isOpen, setIsOpen] = useState(false);
-    const [window, setWindow]= useState(false);
+    const [window, setWindow]= useState(true);
+    const location = useLocation();
+    const routePath = location.pathname.split('/')[1];
+    const [activeItem, setActiveItem] = React.useState(routePath || 'dashboard');
+    const handleActive = (tab) => {
+      setActiveItem(tab);
+   
+    };
     const handleClick = (e)=>{
 
 
@@ -29,22 +36,23 @@ function Skeleton() {
             setWindow(true);
         }
     }
+    console.log(routePath)
   return (
-    <div onClick={handleClick} className="w-full skeleton  h-full ">
-      <Navbar isOpen={isOpen} window={window} setWindow={setWindow} setIsOpen={setIsOpen} />
+    <div onClick={handleClick} className="w-full skeleton relative  h-full ">
+      <Navbar isOpen={isOpen} handleActive={handleActive} window={window} setWindow={setWindow} setIsOpen={setIsOpen} />
       <div className="flex relative h-screen  w-full">
         <div
-          className={` h-full w-full   duration-300  ${
-            isOpen ? "basis-3/12" : "  basis-0 -ml-32"
+          className={` h-full w-full  duration-300  ${
+            isOpen ? "basis-3/12  " : "  basis-0"
           }`}
         >
-          {<Sidebar isOpen={isOpen} />}
+          {<Sidebar handleActive={handleActive} isOpen={isOpen} routePath={routePath} activeItem={activeItem} setActiveItem={setActiveItem} setIsOpen={setIsOpen} />}
         </div>
-        <div className={` ${isOpen ? " basis-9/12 " : "flex-1"} w-96 skeleton  h-full`}>
+        <div className={` ${isOpen ? " basis-9/12  z-10 al:hidden md:block " : "flex-1"} w-96 skeleton  h-full`}>
           <Outlet />
         </div>
       </div>
-          <footer className="bg-slate-300  h-96 flex flex-col gap-y-3 justify-center  items-center pb-28">
+          <footer className="bg-slate-300 h-96 flex flex-col gap-y-3 justify-center  items-center ">
            <div>  <span className={'font-bold text-3xl text-slate-800'}> BHADE</span> <span>&copy;2023</span></div>
            <div> <p className={'text-xl font-bold'}>Contact Developers</p></div>
               <div><i>Frank Ndagula | Salim Mchomvu | Denis Mgaya</i></div>

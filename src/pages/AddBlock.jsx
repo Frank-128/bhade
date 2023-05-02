@@ -16,7 +16,7 @@ function AddBlock() {
     }
     console.log(inputsValue);
   return (
-    <div className='pl-16 flex flex-col  items-center justify-center h-full'>
+    <div className='pl-16 flex flex-col bg-slate-700 items-center justify-center h-full'>
         <div className='w-1/3 h-3/12 bg-slate-300 p-5 rounded-xl flex flex-col justify-evenly'>
         <span  className='font-bold text-2xl text-center'>Add a new Block</span>
        

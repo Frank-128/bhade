@@ -14,7 +14,7 @@ function BlockPage() {
   return (
     <div >
     {/* div for smaller screens 280 to 767  */}
-      <div className='pl-6 h-full md:hidden w-full p-5  bg-slate-800'>
+      <div className='pl-6 h-full md:hidden w-screen p-5  bg-slate-800'>
       <BlockRows/>
      
       <div className='flex   flex-col '>

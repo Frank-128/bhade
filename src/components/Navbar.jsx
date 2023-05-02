@@ -8,9 +8,9 @@ import {
 import { Badge } from "@mui/material";
 import {useState} from "react";
 import {useNavigate} from 'react-router-dom';
-import './../app.css'
+import './../App.css'
 
-function Navbar({ isOpen, setIsOpen,window,setWindow }) {
+function Navbar({ isOpen, setIsOpen,window,setWindow,handleActive }) {
   const navigate = useNavigate();
 
   const setNotificationWindow=()=>{
@@ -19,8 +19,8 @@ function Navbar({ isOpen, setIsOpen,window,setWindow }) {
   return (
     <div className=" ">
       {/* Navbar for small devices */}
-      <div className="bg-slate-200 h-fit  md:hidden sx:w-screen al:w-[23.5rem] flex gap-4 flex-col justify-between p-5 items-center  ">
-        <p onClick={()=>navigate('/')}>
+      <div className="bg-slate-200 h-fit  md:hidden al:w-screen absolute  top-0 left-0 z-50 flex gap-4 flex-col justify-between p-5 items-center  ">
+        <p onClick={()=>{handleActive('dashboard');navigate('/');}}>
           <b className="text-3xl text-orange-600 cursor-pointer">BHADE</b>
         </p>
         {/* div for search */}
@@ -76,7 +76,7 @@ function Navbar({ isOpen, setIsOpen,window,setWindow }) {
               className="mr-5 cursor-pointer  "
             />
           )}
-          <p onClick={()=>navigate('/')}>
+          <p onClick={()=>{handleActive('dashboard');navigate('/');}}>
             <b className="text-3xl text-orange-600 cursor-pointer">BHADE</b>
           </p>
         </div>
@@ -92,7 +92,7 @@ function Navbar({ isOpen, setIsOpen,window,setWindow }) {
           <Badge badgeContent={3}>
             <Notifications  onClick={setNotificationWindow}  className="cursor-pointer notify" style={{ fontSize: "30px" }} />
           </Badge>
-            <Settings  onClick={()=>navigate('/settings')}  className="cursor-pointer" style={{fontSize:"30px"}}/>
+            <Settings  onClick={()=>{navigate('/settings');setIsOpen(false);handleActive('')}}  className="cursor-pointer" style={{fontSize:"30px"}}/>
             <Logout onClick={()=>navigate('./login')} className="mx-1 cursor-pointer" style={{ fontSize: "30px" }} />
 
             
