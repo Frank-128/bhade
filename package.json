@@ -25,5 +25,17 @@
     "postcss": "^8.4.21",
     "tailwindcss": "^3.3.1",
     "vite": "^4.2.0"
-  }
+  },
+  "main": "postcss.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Frank-128/bhade.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Frank-128/bhade/issues"
+  },
+  "homepage": "https://github.com/Frank-128/bhade#readme",
+  "description": ""
 }

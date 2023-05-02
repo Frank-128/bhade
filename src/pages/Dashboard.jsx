@@ -10,13 +10,16 @@ function Dashboard() {
   return (
    <div>
    {/* dashboard for smaller devices from 280 - 767 */}
-     <div className="bg-slate-500 flex h-fit  md:hidden al:ml-1 sx:ml-0 w-full   p-5 flex-col hideScroll">
+
+     <div className="bg-slate-500 flex h-fit md:hidden  al:ml-1 sx:ml-0 w-screen   p-5 flex-col hideScroll">
+
      <BlockRows/>
       <div className="basis-11/12 flex">
         <div className="basis-3/4 ml-6 w-screen al:flex-1  h-3/6 overflow-y-scroll">
          <div className="">
       <div className="text-2xl  bg-slate-500   ml-5    ">Tenants List</div>
-         <TenantBlock name={'Durk Don Toliver'} BlockNo={3} RoomNo={3}  />
+        <div className="overflow-y-scroll h-screen">
+        <TenantBlock name={'Durk Don Toliver'} BlockNo={3} RoomNo={3}  />
           <TenantBlock name={'Yatchy Travis'} BlockNo={3} RoomNo={3}  />
           <TenantBlock name={'Guissepe Monroe'} BlockNo={3} RoomNo={3}  />
           <TenantBlock name={'Denis pascal mgaya'} BlockNo={3} RoomNo={3}  />
@@ -31,18 +34,19 @@ function Dashboard() {
           <TenantBlock name={'Rico Camavinga Benzema'} BlockNo={3} RoomNo={3}  />
           <TenantBlock name={'Rico Camavinga Benzema'} BlockNo={3} RoomNo={3}  />
           <TenantBlock name={'Rico Camavinga Benzema'} BlockNo={3} RoomNo={3}  />
+        </div>
          </div>
         </div>
        
       </div>
     </div>
       {/* dashboard for devices 768 and above */}
-    <div className="bg-slate-500 md:flex xs:hidden h-full p-5  flex-col ">
+    <div className="bg-slate-500 md:flex xs:hidden h-screen p-16  flex-col ">
       <BlockRows/>
       <div className="flex ">
-        <div className="basis-9/12 ml-6 w-screen al:flex-1 flex-start">
+        <div className="basis-10/12 ml-6 w-screen al:flex-1 flex-start">
       <div className="text-3xl  bg-slate-500   ml-5   ">Tenants List</div>
-         <div className="h-[46rem]   overflow-y-scroll hideScroll">
+         <div className="h-[38rem]  overflow-y-scroll hideScroll">
          <TenantBlock name={'Durk Don Toliver'} BlockNo={3} RoomNo={3}  />
           <TenantBlock name={'Yatchy Travis'} BlockNo={3} RoomNo={3}  />
           <TenantBlock name={'Guissepe Monroe'} BlockNo={3} RoomNo={3}  />
