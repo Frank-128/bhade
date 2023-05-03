@@ -13,6 +13,7 @@ export default {
       'sx':'372px',
       'sm':'640px',
       'md':'768px',
+      'ml':'878px',
       'lg':'1024px',
       'xl':'1280px',
       '2xl':'1536px',

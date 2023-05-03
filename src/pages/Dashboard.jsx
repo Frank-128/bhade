@@ -10,7 +10,7 @@ function Dashboard() {
   return (
    <div>
    {/* dashboard for smaller devices from 280 - 767 */}
-     <div className="bg-slate-500 flex h-fit md:hidden  al:ml-1 sx:ml-0 w-screen   p-5 flex-col hideScroll">
+     <div className="bg-slate-500 flex h-fit ml:hidden  al:ml-1 sx:ml-0 w-screen   p-5 flex-col hideScroll">
      <BlockRows/>
       <div className="basis-11/12 flex">
         <div className="basis-3/4 ml-6 w-screen al:flex-1  h-3/6 overflow-y-scroll">
@@ -39,12 +39,12 @@ function Dashboard() {
       </div>
     </div>
       {/* dashboard for devices 768 and above */}
-    <div className="bg-slate-500 md:flex xs:hidden h-screen p-16  flex-col ">
-      <BlockRows/>
-      <div className="flex ">
-        <div className="basis-10/12 ml-6 w-screen al:flex-1 flex-start">
-      <div className="text-3xl  bg-slate-500   ml-5   ">Tenants List</div>
-         <div className="h-[38rem]  overflow-y-scroll hideScroll">
+    <div className="bg-slate-500 ml:flex xs:hidden h-screen  hideScroll flex-col ">
+      <BlockRows />
+      <div className="text-3xl  bg-slate-500  ml-5 basis-1/12  ">Tenants List</div>
+     
+        <div className=" flex basis-8/12 h-96  ">
+         <div className="  overflow-y-scroll   basis-8/12 hideScroll">
          <TenantBlock name={'Durk Don Toliver'} BlockNo={3} RoomNo={3}  />
           <TenantBlock name={'Yatchy Travis'} BlockNo={3} RoomNo={3}  />
           <TenantBlock name={'Guissepe Monroe'} BlockNo={3} RoomNo={3}  />
@@ -63,12 +63,12 @@ function Dashboard() {
           
          </div>
         
-        </div>
         <div className="basis-3/12   ">
           <StatsBlock value={'Total Tenants'} num={8} />
           <StatsBlock value={'Total rooms'} num={10000} />
           <StatsBlock value={'Available rooms'} num={2} />
         </div>
+        
       </div>
     </div>
    </div>

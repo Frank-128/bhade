@@ -3,24 +3,30 @@ import {
   Logout,
   Menu,
   Notifications,
-  Search, Settings,
+  Search,
+  Settings,
 } from "@mui/icons-material";
 import { Badge } from "@mui/material";
-import {useState} from "react";
-import {useNavigate} from 'react-router-dom';
-import './../App.css'
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "./../App.css";
 
-function Navbar({ isOpen, setIsOpen,window,setWindow,handleActive }) {
+function Navbar({ isOpen, setIsOpen, window, setWindow, handleActive }) {
   const navigate = useNavigate();
 
-  const setNotificationWindow=()=>{
-   setWindow(!window);
-  }
+  const setNotificationWindow = () => {
+    setWindow(!window);
+  };
   return (
     <div className=" ">
       {/* Navbar for small devices */}
-      <div className="bg-slate-200 h-fit  md:hidden al:w-screen absolute  top-0 left-0 z-50 flex gap-4 flex-col justify-between p-5 items-center  ">
-        <p onClick={()=>{handleActive('dashboard');navigate('/');}}>
+      <div className="basis-3/12 bg-slate-200 h-fit  ml:hidden al:w-screen  flex gap-4 flex-col justify-between p-5 items-center  ">
+        <p
+          onClick={() => {
+            handleActive("dashboard");
+            navigate("/");
+          }}
+        >
           <b className="text-3xl text-orange-600 cursor-pointer">BHADE</b>
         </p>
         {/* div for search */}
@@ -52,18 +58,17 @@ function Navbar({ isOpen, setIsOpen,window,setWindow,handleActive }) {
             <Badge badgeContent={3}>
               <Notifications style={{ fontSize: "30px" }} />
             </Badge>
-            <Settings onClick={()=>navigate('/settings')} style={{ fontSize: "30px" }}/>
-            <Logout  style={{ fontSize: "30px" }} />
+            <Settings
+              onClick={() => navigate("/settings")}
+              style={{ fontSize: "30px" }}
+            />
+            <Logout style={{ fontSize: "30px" }} />
           </div>
         </div>
       </div>
-      {/* Navbar for md devices and above */}
-      
-      <div className="skeleton bg-slate-200  h-24  w-full  md:flex al:hidden  justify-between p-5 items-center  ">
+      {/* Navbar for ml devices and above */}
 
-      
-        
-
+      <div className="skeleton bg-slate-200  h-24  w-full  ml:flex al:hidden  justify-between p-5 items-center  ">
         <div className="flex items-center  ">
           {isOpen ? (
             <Close
@@ -76,7 +81,12 @@ function Navbar({ isOpen, setIsOpen,window,setWindow,handleActive }) {
               className="mr-5 cursor-pointer  "
             />
           )}
-          <p onClick={()=>{handleActive('dashboard');navigate('/');}}>
+          <p
+            onClick={() => {
+              handleActive("dashboard");
+              navigate("/");
+            }}
+          >
             <b className="text-3xl text-orange-600 cursor-pointer">BHADE</b>
           </p>
         </div>
@@ -90,38 +100,81 @@ function Navbar({ isOpen, setIsOpen,window,setWindow,handleActive }) {
         </div>
         <div className="flex justify-between  gap-4">
           <Badge badgeContent={3}>
-            <Notifications  onClick={setNotificationWindow}  className="cursor-pointer notify" style={{ fontSize: "30px" }} />
+            <Notifications
+              onClick={setNotificationWindow}
+              className="cursor-pointer notify"
+              style={{ fontSize: "30px" }}
+            />
           </Badge>
-            <Settings  onClick={()=>{navigate('/settings');setIsOpen(false);handleActive('')}}  className="cursor-pointer" style={{fontSize:"30px"}}/>
-            <Logout onClick={()=>navigate('./login')} className="mx-1 cursor-pointer" style={{ fontSize: "30px" }} />
-
-            
-            
-          
+          <Settings
+            onClick={() => {
+              navigate("/settings");
+              setIsOpen(false);
+              handleActive("");
+            }}
+            className="cursor-pointer"
+            style={{ fontSize: "30px" }}
+          />
+          <Logout
+            onClick={() => navigate("./login")}
+            className="mx-1 cursor-pointer"
+            style={{ fontSize: "30px" }}
+          />
         </div>
       </div>
-      {window? <div className="hidden">
-         NOTIFICATION
-        </div>:
+      {window ? (
+        <div className="hidden">NOTIFICATION</div>
+      ) : (
         <div className="">
-         <div className='w-[32rem] h-[36rem] notify bg-slate-300 absolute z-20  border-4 rounded-xl right-32 top-16 p-4 '>
-                 <p className="text-black text-2xl  font-bold ">NOTIFICATIONS</p>
-                 <div className="gap-y-2 flex-col h-[31rem] flex overflow-y-scroll mt-4 hideScroll">
-                 
-                 <div className=" rounded-3xl border-2 p-8 border-slate-500  text-2xl">  <p>1. franklin saint rent due is by today</p>  </div>
-                 <div className=" rounded-3xl border-2 p-8 border-slate-500  text-2xl">  <p>1. franklin saint rent due is by today</p>  </div>
-                 <div className=" rounded-3xl border-2 p-8 border-slate-500  text-2xl">  <p>1. franklin saint rent due is by today</p>  </div>
-                 <div className=" rounded-3xl border-2 p-8 border-slate-500  text-2xl">  <p>1. franklin saint rent due is by today</p>  </div>
-                 <div className=" rounded-3xl border-2 p-8 border-slate-500  text-2xl">  <p>1. franklin saint rent due is by today</p>  </div>
-                 <div className=" rounded-3xl border-2 p-8 border-slate-500  text-2xl">  <p>1. franklin saint rent due is by today</p>  </div>
-                 <div className=" rounded-3xl border-2 p-8 border-slate-500  text-2xl">  <p>1. franklin saint rent due is by today</p>  </div>
-                 <div className=" rounded-3xl border-2 p-8 border-slate-500  text-2xl">  <p>1. franklin saint rent due is by today</p>  </div>
-                 <div className=" rounded-3xl border-2 p-8 border-slate-500  text-2xl">  <p>1. franklin saint rent due is by today</p>  </div>
-                 <div className=" rounded-3xl border-2 p-8 border-slate-500  text-2xl">  <p>1. franklin saint rent due is by today</p>  </div>
-                  </div>  
-         </div>
-        </div> }
-    </div>)
+          <div className="w-[32rem] h-[36rem] notify bg-slate-300 absolute z-20  border-4 rounded-xl right-32 top-16 p-4 ">
+            <p className="text-black text-2xl  font-bold ">NOTIFICATIONS</p>
+            <div className="gap-y-2 flex-col h-[31rem] flex overflow-y-scroll mt-4 hideScroll">
+              <div className=" rounded-3xl border-2 p-8 border-slate-500  text-2xl">
+                {" "}
+                <p>1. franklin saint rent due is by today</p>{" "}
+              </div>
+              <div className=" rounded-3xl border-2 p-8 border-slate-500  text-2xl">
+                {" "}
+                <p>1. franklin saint rent due is by today</p>{" "}
+              </div>
+              <div className=" rounded-3xl border-2 p-8 border-slate-500  text-2xl">
+                {" "}
+                <p>1. franklin saint rent due is by today</p>{" "}
+              </div>
+              <div className=" rounded-3xl border-2 p-8 border-slate-500  text-2xl">
+                {" "}
+                <p>1. franklin saint rent due is by today</p>{" "}
+              </div>
+              <div className=" rounded-3xl border-2 p-8 border-slate-500  text-2xl">
+                {" "}
+                <p>1. franklin saint rent due is by today</p>{" "}
+              </div>
+              <div className=" rounded-3xl border-2 p-8 border-slate-500  text-2xl">
+                {" "}
+                <p>1. franklin saint rent due is by today</p>{" "}
+              </div>
+              <div className=" rounded-3xl border-2 p-8 border-slate-500  text-2xl">
+                {" "}
+                <p>1. franklin saint rent due is by today</p>{" "}
+              </div>
+              <div className=" rounded-3xl border-2 p-8 border-slate-500  text-2xl">
+                {" "}
+                <p>1. franklin saint rent due is by today</p>{" "}
+              </div>
+              <div className=" rounded-3xl border-2 p-8 border-slate-500  text-2xl">
+                {" "}
+                <p>1. franklin saint rent due is by today</p>{" "}
+              </div>
+              <div className=" rounded-3xl border-2 p-8 border-slate-500  text-2xl">
+                {" "}
+                <p>1. franklin saint rent due is by today</p>{" "}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
 }
 
 export default Navbar;

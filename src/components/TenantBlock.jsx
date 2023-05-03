@@ -17,7 +17,7 @@ function TenantBlock({ name, BlockNo, RoomNo, }) {
   }
   
 function TenantButton({ type,buttonColor,onPop}) {
-  return <button   onClick={onPop} className={`  al:p-2 h-10 w-24   ${buttonColor} rounded-lg`}>{type}</button>;
+  return <button   onClick={onPop} className={`  al:w-16 al:p-2 h-10 sx:w-24 w-20   ${buttonColor} rounded-lg`}>{type}</button>;
 }
   
 

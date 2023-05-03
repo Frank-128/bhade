@@ -21,7 +21,7 @@ function Sidebar({ isOpen,setIsOpen,activeItem,handleActive,routePath}) {
   return (
     <div>
     {/* sidebar for smaller devices from 280px to 768px */}
-      <div className={isOpen?" bg-slate-400  static w-screen  md:hidden  h-screen":" bg-slate-400 fixed hidden  md:hidden  h-screen"}>
+      <div className={isOpen?" bg-slate-400  static w-screen  ml:hidden  h-screen":" bg-slate-400 fixed hidden  ml:hidden  h-screen"}>
       <ul className="flex flex-col  gap-y-4  ">
         <li>
           <div
@@ -101,7 +101,7 @@ function Sidebar({ isOpen,setIsOpen,activeItem,handleActive,routePath}) {
       </ul>
     </div>
     {/* sidebar for large devices from 768 and above */}
-    <div className=" bg-slate-400 al:hidden md:block  h-screen">
+    <div className=" bg-slate-400 al:hidden ml:block  h-screen">
       <ul className="flex flex-col  gap-y-4  ">
         <li>
           <div
