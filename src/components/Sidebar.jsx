@@ -180,6 +180,7 @@ function Sidebar({ isOpen,setIsOpen,activeItem,handleActive,routePath}) {
         </li>
       </ul>
     </div>
+
     </div>
   );
 }
