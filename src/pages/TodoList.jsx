@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { todos } from "../assets/data";
 import Tasks from "../components/Tasks";
+import './../App.css'
 
 function TodoList() {
   const [activeTab, setActiveTab] = useState("tab1");
@@ -9,10 +10,10 @@ function TodoList() {
     setActiveTab(tab);
   };
   return (
-    <div className="flex flex-col  ">
-      <div className="bg-gray-100 pl-16">
+    <div className="flex flex-col h-screen ml:w-full al:w-screen">
+      <div className="bg-gray-100  al:flex ml:block justify-between al:overflow-x-scroll ml:overflow-hidden hideScroll">
         <button
-          className={` rounded p-3 m-3 ${
+          className={` rounded p-3 m-3 w-32 ${
             activeTab === "tab1" ? "bg-orange-300 " : "bg-slate-300"
           }`}
           onClick={() => handleClick("tab1")}
@@ -20,7 +21,7 @@ function TodoList() {
           All Tasks
         </button>
         <button
-          className={` rounded  p-3 m-3 ${
+          className={` rounded  p-3 m-3 ml:w-48 al:32 ${
             activeTab === "tab2" ? "bg-orange-300" : "bg-slate-300"
           }`}
           onClick={() => handleClick("tab2")}
@@ -28,15 +29,15 @@ function TodoList() {
           Complete Tasks
         </button>
         <button
-          className={` rounded p-3 m-3 ${
+          className={` rounded p-3 m-3 w-32 ${
             activeTab === "tab3" ? "bg-orange-300" : "bg-slate-300"
-          }`}
+          } `}
           onClick={() => handleClick("tab3")}
         >
           Pending Tasks
         </button>
       </div>
-      <div className="bg-slate-200 pl-16 h-screen overflow-y-scroll">
+      <div className="bg-slate-200  h-screen overflow-y-scroll">
         {activeTab === "tab1" && <Tasks task={"all"} />}
         {activeTab === "tab2" && <Tasks task={"complete"} />}
         {activeTab === "tab3" && <Tasks task={"pending"} />}

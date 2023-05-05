@@ -8,10 +8,10 @@ function Rooms() {
 
  
   return (
-    <div className='h-full bg-slate-700  overflow-y-scroll'>
-    <div className='pl-16'><button onClick={()=>navigate('/addBlock')}><ArrowBack/>Back </button></div>
+    <div className='h-screen bg-slate-700  overflow-y-scroll '>
+    <div className='text-white'><button onClick={()=>navigate('/addBlock')}><ArrowBack/>Back </button></div>
       
-      <p className='text-center font-bold text-3xl'>Fill in the rooms Form</p>
+      <p className='text-center font-bold text-3xl text-white'>Fill in the rooms Form</p>
        { Array(Number(state.roomNo)).fill().map((_,i)=>(<AddRooms i={i}/>))}
      
     </div>

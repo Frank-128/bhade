@@ -3,8 +3,8 @@ import React from 'react'
 function AddRooms(i) {
    
   return (
-    <div className='rounded p-5 flex items-center justify-center h-fit w-full   '>
-       <div className='w-1/3 bg-slate-400 p-4 rounded'>
+    <div className='rounded p-5 flex items-center justify-center h-fit w-screen'>
+       <div className='ml:w-1/3 w-full bg-slate-400 p-4 rounded '>
        <form className='flex h-full  flex-col justify-between' action="">
         <div className='flex flex-col '>
             <label htmlFor="">Room No {i.i+1}</label>

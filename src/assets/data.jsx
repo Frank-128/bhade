@@ -371,7 +371,7 @@ export const todos = [
     {
         id:'1',
         status:'complete',
-        message:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate modi ut quae repellendus sequi voluptatibus possimus labore, delectus perferendis! Beatae voluptate veritatis totam placeat molestiae delectus error ad autem amet!',
+        message:'Lorem is here',
         time:'Thur,11.02.2023 08:30am '
     },
     {

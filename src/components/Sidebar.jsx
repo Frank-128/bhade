@@ -52,7 +52,7 @@ function Sidebar({ isOpen,setIsOpen,activeItem,handleActive,routePath}) {
           {openBlocks && isOpen && <>
           {
             blocks.map((item)=>{
-              return <BlockListItem num={item.No} handleMiniActive={handleMiniActive} miniActive={miniActive} />
+              return <BlockListItem num={item.No} handleMiniActive={handleMiniActive} miniActive={miniActive} setIsOpen={setIsOpen}/>
             })
           }
           
@@ -61,7 +61,7 @@ function Sidebar({ isOpen,setIsOpen,activeItem,handleActive,routePath}) {
         </li>
         <li>
           <div
-            onClick={() => {handleActive("addTenant");navigate('/addTenant');setOpenBlocks(false)}}
+            onClick={() => {handleActive("addTenant");navigate('/addTenant');setOpenBlocks(false);setIsOpen(false)}}
             className={
               activeItem === "addTenant"
                 ? "flex items-center bg-gray-800 p-2 cursor-pointer text-slate-300"
@@ -74,7 +74,7 @@ function Sidebar({ isOpen,setIsOpen,activeItem,handleActive,routePath}) {
         </li>
         <li>
           <div
-            onClick={() => {handleActive("todolist");navigate('/todolist');setOpenBlocks(false)}}
+            onClick={() => {handleActive("todolist");navigate('/todolist');setOpenBlocks(false);setIsOpen(false)}}
             className={
               activeItem === "todolist"
                 ? "flex items-center bg-gray-800 p-2 cursor-pointer text-slate-300"
@@ -87,7 +87,7 @@ function Sidebar({ isOpen,setIsOpen,activeItem,handleActive,routePath}) {
         </li>
         <li>
           <div
-            onClick={() => {handleActive("addBlock");navigate('/addBlock');setOpenBlocks(false)}}
+            onClick={() => {handleActive("addBlock");navigate('/addBlock');setOpenBlocks(false);setIsOpen(false)}}
             className={
               activeItem === "addBlock"
                 ? "flex items-center bg-gray-800 p-2 cursor-pointer text-slate-300"

@@ -4,7 +4,7 @@ const AddTenant = () => {
   return (
     
    <div className="flex  bg-slate-600  justify-center ml:h-screen al:h-full ">
-     <form className=" flex ml:w-2/3 al:w-screen  h-fit p-3 ml:rounded-2xl bg-slate-400  flex-col items-center justify-center ">
+     <form className=" flex  ml:w-2/3 al:w-screen  h-fit ml:my-3 pb-2 ml:rounded-2xl bg-slate-400  flex-col items-center justify-center ">
         <i><p className="pt-8 font-bold">Fill the form to Add a Tenant</p></i>
       <div className="mt-6">
         <label className="block mb-2 font-bold text-sm  " htmlFor="firstname">FirstName:</label>
