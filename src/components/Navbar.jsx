@@ -68,7 +68,7 @@ function Navbar({ isOpen, setIsOpen, window, setWindow, handleActive }) {
       </div>
       {/* Navbar for ml devices and above */}
 
-      <div className="skeleton bg-slate-200  h-24  w-full  ml:flex al:hidden  justify-between p-5 items-center  ">
+      <div className="skeleton bg-slate-200  h-24  w-full   ml:flex al:hidden  justify-between p-5 items-center  ">
         <div className="flex items-center  ">
           {isOpen ? (
             <Close

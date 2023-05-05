@@ -47,17 +47,9 @@ function Dashboard() {
          <div className="  overflow-y-scroll   basis-8/12 hideScroll">
          <TenantBlock name={'Durk Don Toliver'} BlockNo={3} RoomNo={3}  />
           <TenantBlock name={'Yatchy Travis'} BlockNo={3} RoomNo={3}  />
-          <TenantBlock name={'Guissepe Monroe'} BlockNo={3} RoomNo={3}  />
-          <TenantBlock name={'Denis pascal mgaya'} BlockNo={3} RoomNo={3}  />
-          <TenantBlock name={'Rossevault Campbell'} BlockNo={3} RoomNo={3}  />
           <TenantBlock name={'Alton Ashville'} BlockNo={3} RoomNo={3}  />
-          <TenantBlock name={'Bonttego Gustavo'} BlockNo={3} RoomNo={3}  />
-          <TenantBlock name={'Hilton Davies'} BlockNo={3} RoomNo={3}  />
-          <TenantBlock name={'Shaundria Saint'} BlockNo={3} RoomNo={3}  />
-          <TenantBlock name={'Bradley Houston'} BlockNo={3} RoomNo={3}  />
-          <TenantBlock name={'Virginia Majors'} BlockNo={3} RoomNo={3}  />
-          <TenantBlock name={'Rico Camavinga Benzema'} BlockNo={3} RoomNo={3}  />
-          <TenantBlock name={'Rico Camavinga Benzema'} BlockNo={3} RoomNo={3}  />
+        
+         
           <TenantBlock name={'Rico Camavinga Benzema'} BlockNo={3} RoomNo={3}  />
           <TenantBlock name={'Rico Camavinga Benzema'} BlockNo={3} RoomNo={3}  />
           

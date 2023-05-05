@@ -3,11 +3,11 @@ import React from "react";
 const AddTenant = () => {
   return (
     
-   <div className="flex items-center justify-center">
-     <form className=" flex w-2/3 h-fit bg-slate-300 pb-6 pt-6 flex-col items-center justify-center ">
+   <div className="flex  bg-slate-600  justify-center ml:h-screen al:h-full ">
+     <form className=" flex ml:w-2/3 al:w-screen  h-fit p-3 ml:rounded-2xl bg-slate-400  flex-col items-center justify-center ">
         <i><p className="pt-8 font-bold">Fill the form to Add a Tenant</p></i>
       <div className="mt-6">
-        <label className="block mb-2 font-bold text-sm font-medium " htmlFor="firstname">FirstName:</label>
+        <label className="block mb-2 font-bold text-sm  " htmlFor="firstname">FirstName:</label>
         <input
           className=" border-2 p-1 border-blue-400 rounded-xl w-64"
           type="text"
@@ -17,7 +17,7 @@ const AddTenant = () => {
         />
       </div>
       <div className="mt-6">
-        <label className="block mb-2 font-bold text-sm font-medium "  htmlFor="lastname">LastName:</label>
+        <label className="block mb-2 font-bold text-sm  "  htmlFor="lastname">LastName:</label>
         <input
           className=" border-2 p-1 border-blue-400 rounded-xl w-64"
           type="text"
@@ -27,7 +27,7 @@ const AddTenant = () => {
         />
       </div>
       <div className="mt-6">
-        <label className="block mb-2 font-bold text-sm font-medium " htmlFor="phoneNo">Phone Number:</label>
+        <label className="block mb-2 font-bold text-sm  " htmlFor="phoneNo">Phone Number:</label>
         <input
           className=" border-2 p-1 border-blue-400 rounded-xl w-64"
           type="text"
@@ -37,7 +37,7 @@ const AddTenant = () => {
         />
       </div><br/>
       <div className="mb-6">
-        <label className="block mb-2 font-bold text-sm font-medium " htmlFor="phoneNo2">Phone Number(2) (Optional):</label>
+        <label className="block mb-2 font-bold text-sm  " htmlFor="phoneNo2">Phone Number(2) (Optional):</label>
         <input
           className=" border-2 p-1 border-blue-400 rounded-xl w-64"
           type="text"
@@ -47,7 +47,7 @@ const AddTenant = () => {
         />
       </div>
       <div className="mb-6">
-        <label className="block mb-2 font-bold text-sm font-medium " htmlFor="contract">Contract:</label>
+        <label className="block mb-2 font-bold text-sm  " htmlFor="contract">Contract:</label>
         <input
           type="file"
           name="contract"
@@ -56,7 +56,7 @@ const AddTenant = () => {
         />
       </div>
       <div className="mb-6">
-        <label className="block mb-2 font-bold text-sm font-medium " htmlFor="startDate">Contract StartDate:</label>
+        <label className="block mb-2 font-bold text-sm  " htmlFor="startDate">Contract StartDate:</label>
         <input
           type="date"
           name="startDate"
@@ -65,7 +65,7 @@ const AddTenant = () => {
         />
       </div>
       <div className="mb-6">
-        <label className="block mb-2 font-bold text-sm font-medium " htmlFor="endDate">Contract EndDate:</label>
+        <label className="block mb-2 font-bold text-sm  " htmlFor="endDate">Contract EndDate:</label>
         <input
           type="date"
           name="endDate"
@@ -74,7 +74,7 @@ const AddTenant = () => {
         />
       </div>
       <div className="mb-6">
-        <label className="block mb-2 text-sm font-medium font-bold ">Room</label>
+        <label className="block mb-2 text-sm  font-bold ">Room</label>
         <select className=" border-2  p-1 border-blue-400 rounded-xl w-64">
           <option value="">Block1-Room2</option>
           <option value="">Block2-Room4</option>
@@ -84,7 +84,7 @@ const AddTenant = () => {
         </select>
       </div>
       <div className="">
-        <label className="block mb-2 text-sm font-medium font-bold">Current Metre Reading:</label>
+        <label className="block mb-2 text-sm  font-bold">Current Metre Reading:</label>
         <input
          className=" border-2 p-1 border-blue-400 rounded-xl w-64"
           type="number"
@@ -93,7 +93,7 @@ const AddTenant = () => {
           name="metre"
         />
       </div><br/>
-      <button type="submit" className="border-2 p-1 border-blue-400 bg-slate-400 rounded-xl w-32 ">
+      <button type="submit" className="border-2 p-1 border-blue-400 bg-slate-600 text-white rounded-xl w-32 ">
         Add Tenant
       </button>
     </form>

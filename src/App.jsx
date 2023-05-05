@@ -73,7 +73,7 @@ function Skeleton() {
         <div
           className={` ${
             isOpen ? " basis-9/12  z-10 al:hidden md:block " : "flex-1"
-          } w-96 skeleton  h-full`}
+          } w-96 skeleton  h-full `}
         >
           <Outlet />
         </div>

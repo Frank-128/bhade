@@ -5,8 +5,8 @@ function RoomBlock({roomDetails}) {
   return (
    <div>
    {/* Roomblock for smaller devices from 280-767 */}
-     <div className='bg-slate-300 my-2 rounded-xl flex md:hidden items-center w-10/12 p-3  md:w-fit '>
-        <div>
+     <div className='bg-slate-300 my-2 rounded-xl flex flex-col md:hidden items-center  w-10/12  '>
+        
         <p className='font-bold text-3xl text-left   mb-3'> Room no {roomDetails.No}</p>
         <div className='w-10/12 flex justify-between  '>
         <span className='font-bold'>Tenant Name :</span> <Link to='/'><span className='text-orange-600'>{roomDetails.Name}</span></Link>
@@ -26,7 +26,7 @@ function RoomBlock({roomDetails}) {
        
          <div className='w-96 flex justify-center my-2'>
          <button className='bg-orange-400 rounded-xl p-3 '>Update Details</button>
-         </div>
+         
         </div>
        
     </div>
