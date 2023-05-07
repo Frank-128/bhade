@@ -28,7 +28,7 @@ function TenantBlock({ name, BlockNo, RoomNo }) {
     return (
       <button
         onClick={onPop}
-        className={`  al:w-16 al:p-2 h-10 sx:w-24 w-20   ${buttonColor} rounded-lg`}
+        className={`  al:w-[4.5rem] al:p-2 h-10 sx:w-24 w-20   ${buttonColor} rounded-lg`}
       >
         {type}
       </button>
@@ -38,7 +38,7 @@ function TenantBlock({ name, BlockNo, RoomNo }) {
   return (
     <div>
       {/* tenant block for smaller devices from 280 to 768 */}
-      <div className="bg-slate-200 skeleton w-full rounded-lg p-2 my-2 ml-4 h-full justify-between md:hidden flex flex-col shadow-md">
+      <div className="bg-slate-200 skeleton w-full rounded-lg p-2 my-2  h-full justify-between md:hidden flex flex-col shadow-md">
         <div>
           <p className="text-xl">
             <b>{name}</b>

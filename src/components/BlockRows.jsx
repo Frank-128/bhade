@@ -3,12 +3,12 @@ import Block from './Block'
 import {blocks} from '../assets/data'
 function BlockRows() {
   return (
-    <div className=" flex  overflow-x-scroll basis-2/12 overflow-y-auto h-32 justify-between hideScroll pl-6">
+    <div className=" flex  overflow-x-scroll basis-2/12 overflow-y-auto h-32 justify-between hideScroll ">
         
        
         {
         blocks.map((item)=>
-          <Block item={item} />
+          <Block item={item}  />
         
         )
       }

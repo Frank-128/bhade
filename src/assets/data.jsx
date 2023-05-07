@@ -453,3 +453,13 @@ export const todos = [
         time:'Thur,11.02.2023 08:30am '
     },
 ]
+
+export const chartData = [
+    [
+        "months","jan","feb","march","april","may","june","july","aug","sept","oct","nov","dec",
+    ],
+    
+    [
+        10,12,9,5,23.567,2.4,34,13.41,17,16,7.8,2,
+    ]
+]

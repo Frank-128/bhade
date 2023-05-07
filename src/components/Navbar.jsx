@@ -13,13 +13,8 @@ import "./../App.css";
 
 function Navbar({ isOpen, setIsOpen, window23, setWindow23, handleActive }) {
   const navigate = useNavigate();
-  const [newState,setNewState]=useState(false);
+  const [newState, setNewState] = useState(false);
 
-  const setNotificationWindow = () => {
-    
-    setWindow23(!window23);
-  };
-  console.log(window23);
   return (
     <div className=" ">
       {/* Navbar for small devices */}
@@ -58,18 +53,16 @@ function Navbar({ isOpen, setIsOpen, window23, setWindow23, handleActive }) {
           </div>
           {/* div for notifications and logout */}
           <div className="flex items-center justify-between gap-3">
-          <div onClick={()=>setNewState(!newState)}>
-          
-          <Badge   badgeContent={3}>
-            <Notifications
-             
-              
-              style={{ fontSize: "30px" }}
-            />
-          </Badge>
-        </div>
+            <div onClick={() => setNewState(!newState)}>
+              <Badge badgeContent={3}>
+                <Notifications style={{ fontSize: "30px" }} />
+              </Badge>
+            </div>
             <Settings
-              onClick={() => navigate("/settings")}
+              onClick={() => {
+                navigate("/settings");
+                setIsOpen(false);
+              }}
               style={{ fontSize: "30px" }}
             />
             <Logout style={{ fontSize: "30px" }} />
@@ -109,16 +102,11 @@ function Navbar({ isOpen, setIsOpen, window23, setWindow23, handleActive }) {
           <Search />
         </div>
         <div className="flex justify-between  gap-4">
-        <div onClick={()=>setNewState(!newState)}>
-          
-          <Badge   badgeContent={3}>
-            <Notifications
-             
-              
-              style={{ fontSize: "30px" }}
-            />
-          </Badge>
-        </div>
+          <div onClick={() => setNewState(!newState)}>
+            <Badge badgeContent={3}>
+              <Notifications style={{ fontSize: "30px" }} />
+            </Badge>
+          </div>
           <Settings
             onClick={() => {
               navigate("/settings");
@@ -135,22 +123,23 @@ function Navbar({ isOpen, setIsOpen, window23, setWindow23, handleActive }) {
           />
         </div>
       </div>
-      {newState &&
+      {newState && (
         <div className="">
           <div className="ml:w-[32rem] w-3/4 h-[36rem]  bg-slate-300 absolute z-20  border-4 rounded-xl right-32 al:right-0 p-4 ">
             <p className="text-black ml:text-2xl   font-bold ">NOTIFICATIONS</p>
             <div className="gap-y-2 flex-col h-[31rem] flex overflow-y-scroll mt-4 hideScroll">
-            { Array(10).fill().map((_,i)=>(
-              <div className=" rounded-3xl border-2 ml:p-8 border-slate-500 p-3 ml:text-2xl">
-                {" "}
-                <p>1. franklin saint rent due is by today</p>{" "}
-              </div>
-             ))}
-              
+              {Array(10)
+                .fill()
+                .map((_, i) => (
+                  <div className=" rounded-3xl border-2 ml:p-8 border-slate-500 p-3 ml:text-2xl">
+                    {" "}
+                    <p>1. franklin saint rent due is by today</p>{" "}
+                  </div>
+                ))}
             </div>
           </div>
         </div>
-      }
+      )}
     </div>
   );
 }

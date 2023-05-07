@@ -1,7 +1,7 @@
 import { Person, Add, Apple } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 import { ArrowBack } from "@mui/icons-material";
-
+import "../App.css";
 export const Account = () => {
   return (
     <div className=" bg-slate-500 h-screen  p-6  w-screen ml:w-full ">
@@ -27,10 +27,10 @@ export const Account = () => {
 </div>
      </div>
 
-     <div className='h-3/4 overflow-y-scroll'>
+     <div className='h-3/4 overflow-y-scroll hideScroll'>
      {
         Array(6).fill().map((_,i)=>(
-            <div className="flex   bg-slate-300  rounded-2xl p-4 mt-4 flex-col sx:flex-row justify-between items-center">
+            <div className="flex  gap-2 bg-slate-300  rounded-2xl p-4 mt-4 flex-col sx:flex-row justify-between items-center">
         <div className="flex  flex-col ml:flex-row ">
           <div className="ml:hidden">
             <Person
@@ -44,11 +44,11 @@ export const Account = () => {
               className="text-slate-700 al:hidden ml:block "
             />
           </div>
-          <span className="ml:text-2xl al:text-sm  font-bold flex items-center ">
+          <span className="ml:text-2xl al:text-md  font-bold flex items-center ">
             Dnspascal094@gmail.com
           </span>
         </div>
-        <button className=" rounded-2xl border-slate-800 ml:w-28 p-2 al:w-18  font-bold bg-red-600 ">
+        <button className=" rounded-2xl border-slate-800 ml:w-28 p-2 al:w-18  font-bold bg-orange-600 ">
           Remove
         </button>
       </div>
