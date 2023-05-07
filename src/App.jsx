@@ -26,7 +26,7 @@ import AddBlock from "./pages/AddBlock";
 function Skeleton() {
  
   const [isOpen, setIsOpen] = useState(false);
-  const [window, setWindow] = useState(true);
+  const [window23, setWindow23] = useState(false);
   const location = useLocation();
   const routePath = location.pathname.split("/")[1];
   const [activeItem, setActiveItem] = React.useState(routePath || "dashboard");
@@ -35,7 +35,7 @@ function Skeleton() {
   };
   const handleClick = (e) => {
     if (e.target.classList.contains("notify") === false) {
-      setWindow(true);
+      setWindow23(true);
     }
   };
   
@@ -47,8 +47,8 @@ function Skeleton() {
       <Navbar
         isOpen={isOpen}
         handleActive={handleActive}
-        window={window}
-        setWindow={setWindow}
+        window23={window23}
+        setWindow23={setWindow23}
         setIsOpen={setIsOpen}
         
       />
@@ -72,7 +72,7 @@ function Skeleton() {
         </div>
         <div
           className={` ${
-            isOpen ? " basis-9/12  z-10 al:hidden md:block " : "flex-1"
+            isOpen ? " basis-9/12  z-10 al:hidden ml:block " : "flex-1"
           } w-96 skeleton  h-full `}
         >
           <Outlet />
