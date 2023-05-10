@@ -21,7 +21,7 @@ function BlockPage() {
             <p className="font-bold text-3xl text-slate-400">Block No {id}</p>
             <span className="text-xl text-slate-500">Rooms list</span>
             <div className="w-full flex flex-col items-center overflow-y-scroll pl-14">
-              {blocks[id - 1].Rooms.map((item) => (
+              {blocks[id - 1].Rooms?.map((item) => (
                 <RoomBlock roomDetails={item} />
               ))}
             </div>

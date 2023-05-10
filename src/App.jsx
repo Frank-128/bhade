@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import {
   BrowserRouter,
+  Navigate,
   Outlet,
   Route,
   Routes,
@@ -120,6 +121,7 @@ function App() {
           <Route path="/changepassword" element={<ChangePassword />} />
           <Route path="/accounts" element={<Account />} />
           <Route path="/changeemail" element={<ChangeEmail />} />
+          <Route path="*" element={<Navigate to='/' />} />
         </Route>
       </Routes>
     </BrowserRouter>
