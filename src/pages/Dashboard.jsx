@@ -1,14 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import BlockRows from "../components/BlockRows";
 import Navbar from "../components/Navbar";
 import StatsBlock from "../components/StatsBlock";
 import TenantBlock from "../components/TenantBlock";
 import './../App.css';
+import { Snackbar } from "@mui/material";
 
-function Dashboard() {
+function Dashboard({setOpenSnac,openSnac}) {
 
   return (
    <div>
+   <Snackbar
+   anchorOrigin={{vertical:'top',horizontal:'center'}}
+    open={openSnac}
+    onClose={()=>setOpenSnac(false)}
+    autoHideDuration={4000}
+    message={"logged in"}
+    
+    
+   />
    {/* dashboard for smaller devices from 280 - 767 */}
      <div className="bg-slate-500 flex h-fit ml:hidden   sx:ml-0 w-screen   p-3 flex-col hideScroll">
      <BlockRows/>

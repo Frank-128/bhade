@@ -23,10 +23,24 @@ import EditTenant from "./pages/EditTenant";
 import AddRooms from "./pages/AddRooms";
 import TodoList from "./pages/TodoList";
 import AddBlock from "./pages/AddBlock";
+import axios from "axios";
+  
+axios.defaults.baseURL = "http://localhost:8000/api";
+axios.defaults.headers.post["Content-Type"] = "application/json";
+axios.defaults.headers.post["Accept"] = "application/json";
+axios.defaults.headers.post["Content-Type"] = "multipart/form-data";
+
+axios.defaults.withCredentials = true;
+axios.interceptors.request.use(function (config){
+  const token = sessionStorage.getItem("token");
+  config.headers.Authorization = token ? `Bearer ${token}` :"";
+  return config;
+});
 
 function Skeleton() {
  
   const [isOpen, setIsOpen] = useState(false);
+
   const [window23, setWindow23] = useState(false);
   const location = useLocation();
   const routePath = location.pathname.split("/")[1];
@@ -103,12 +117,13 @@ function Skeleton() {
   an;
 }
 function App() {
+  const [openSnac,setOpenSnac]= useState(false);
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<Login setOpenSnac={setOpenSnac} />} />
         <Route path="/" element={<Skeleton />}>
-          <Route path="/" element={<Dashboard />} />
+          <Route path="/" element={<Dashboard setOpenSnac={setOpenSnac} openSnac={openSnac}/>} />
           <Route path="/blocks/:id" element={<BlockPage />} />
           <Route path="/rooms" element={<Rooms />} />
           <Route path="/tenant/:id" element={<TenantDetail />} />

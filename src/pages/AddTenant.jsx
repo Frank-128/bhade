@@ -37,13 +37,13 @@ const AddTenant = () => {
         />
       </div><br/>
       <div className="mb-6">
-        <label className="block mb-2 font-bold text-sm  " htmlFor="phoneNo2">Phone Number(2) (Optional):</label>
+        <label className="block mb-2 font-bold text-sm  " htmlFor="amountPaid">Amount Paid:</label>
         <input
           className=" border-2 p-1 border-blue-400 rounded-xl w-64"
           type="text"
-          name="phoneNo2"
-          id="phoneNo2"
-          placeholder="Phone No."
+          name="amountPaid"
+          id="amountPaid"
+          placeholder="amountPaid"
         />
       </div>
       <div className="mb-6">

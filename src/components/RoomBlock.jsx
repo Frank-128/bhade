@@ -15,6 +15,9 @@ function RoomBlock({roomDetails}) {
         <span className='font-bold'>Metre No :</span> <span> {roomDetails.Metre}</span>
         </div>
         <div className=' w-10/12 flex justify-between '>
+        <span className='font-bold'>Luku No :</span> <span> {roomDetails.Luku}</span>
+        </div>
+        <div className=' w-10/12 flex justify-between '>
         <span className='font-bold'>Current Metre Reading :</span> <span>{roomDetails.MetreReading}</span>
         </div>
         <div className=' w-10/12 flex justify-between '>
@@ -42,6 +45,9 @@ function RoomBlock({roomDetails}) {
         </div>
         <div className='flex  justify-between '>
         <span className='font-bold'>Current Metre Reading :</span> <span>{roomDetails.MetreReading}</span>
+        </div>
+        <div className=' flex justify-between '>
+        <span className='font-bold'>Luku No :</span> <span> {roomDetails.Luku}</span>
         </div>
         <div className='flex  justify-between '>
         <span className='font-bold'>Type:</span> <span>{roomDetails.Type}</span>

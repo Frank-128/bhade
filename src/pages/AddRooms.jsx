@@ -11,29 +11,25 @@ function AddRooms(i) {
             <input className='p-2' type="number" value={i.i+1} />
         </div>
         <div className='flex flex-col '>
-            <label htmlFor="">Tenant Name</label>
-            <input className='p-2' type="text"  />
-        </div>
-        <div className='flex flex-col '>
             <label htmlFor="">Metre No.</label>
             <input className='p-2' type="text"  />
         </div>
         <div className='flex flex-col '>
-            <label htmlFor="">Current Metre Reading</label>
+            <label htmlFor="">Luku No.</label>
+            <input className='p-2' type="text"  />
+        </div>
+        <div className='flex flex-col '>
+            <label htmlFor="">Type</label>
            <select>
-            <option>Single Room Public</option>
-            <option>Double Room Public</option>
+            <option>Single Room </option>
+            <option>Double Room </option>
             <option> Single Master Bedroom</option>
             <option>Double Master Bedroom</option>
            
            </select>
         </div>
         <div className='flex flex-col '>
-            <label htmlFor="">Type</label>
-            <input className='p-2' type="text"  />
-        </div>
-        <div className='flex flex-col '>
-            <label htmlFor="">Price</label>
+            <label htmlFor="">Amount</label>
             <input className='p-2' type="text"  />
         </div>
        </form>
