@@ -66,7 +66,7 @@ function Metre() {
     })
   },[])
   return (
-    <div className="bg-slate-700 w-full flex flex-col h-screen text-gray-400">
+    <div className="bg-slate-700 w-screen md:w-full flex flex-col h-screen text-gray-400">
       <div>
         <button className="bg-slate-500 float-right m-10 p-5 rounded">
           Add new user
@@ -81,10 +81,10 @@ function Metre() {
             </button>
           </div>
           {filterOpen && (
-            <div className="absolute right-10 top-10 filterDiv bg-slate-500 p-5 float-right">
+            <div className="absolute md:right-10 right-5 top-10 filterDiv bg-slate-500 p-3 md:p-5 w-3/4 md:w-fit float-right">
               <ul className="flex filterDiv  flex-col gap-3">
-                <li className="cursor-pointer filterDiv hover:opacity-50"><label htmlFor="name" className="filterDiv"><span>Name</span></label> <input id="name" className="p-1 filterDiv bg-slate-400 text-slate-200" type="text" value={filterName} onChange={(e)=>setFilterName(e.target.value)} /></li>
-                <li className="cursor-pointer filterDiv hover:opacity-50"><label htmlFor="time" className="filterDiv"><span>Month</span></label> <input id="time" className="bg-slate-400 filterDiv text-slate-200" type="month" value={filterMonth} onChange={(e)=>setFilterMonth(e.target.value)} /></li>
+                <li className="cursor-pointer filterDiv hover:opacity-50"><label htmlFor="name" className="filterDiv"><span>Name</span></label> <input id="name" className="p-1  w-3/4 filterDiv bg-slate-400 text-slate-200" type="text" value={filterName} onChange={(e)=>setFilterName(e.target.value)} /></li>
+                <li className="cursor-pointer filterDiv hover:opacity-50"><label htmlFor="time" className="filterDiv"><span>Month</span></label> <input id="time" className="bg-slate-400 w-2/3  md:w-3/4 filterDiv text-slate-200" type="month" value={filterMonth} onChange={(e)=>setFilterMonth(e.target.value)} /></li>
                 <li className="cursor-pointer filterDiv hover:opacity-50" onClick={()=>setFilterTime(!filterTime)}>Time {filterTime?"(Descending)":"(Ascending)"}</li>
                 <li className="cursor-pointer filterDiv hover:opacity-50" onClick={setDefaultValue}>Default</li>
               </ul>
