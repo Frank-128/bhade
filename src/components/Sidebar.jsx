@@ -1,4 +1,5 @@
 import {
+  AddBox,
   AddHome,
   Apartment,
   Home,
@@ -176,6 +177,19 @@ function Sidebar({ isOpen,setIsOpen,activeItem,handleActive,routePath}) {
           >
             <AddHome style={{ fontSize: "50px" }} />{" "}
             {isOpen && <span className="text-xl">Add Block</span>}
+          </div>
+        </li>
+        <li>
+          <div
+            onClick={() => {handleActive("metre");navigate('/metre');setOpenBlocks(false)}}
+            className={
+              activeItem === "metre"
+                ? "flex items-center bg-gray-800 p-2 cursor-pointer text-slate-300"
+                : "flex items-center  p-2 cursor-pointer "
+            }
+          >
+            <AddBox style={{ fontSize: "50px" }} />{" "}
+            {isOpen && <span className="text-xl">Metre</span>}
           </div>
         </li>
       </ul>

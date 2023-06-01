@@ -24,6 +24,7 @@ import AddRooms from "./pages/AddRooms";
 import TodoList from "./pages/TodoList";
 import AddBlock from "./pages/AddBlock";
 import axios from "axios";
+import Metre from "./pages/Metre";
   
 axios.defaults.baseURL = "http://localhost:8000/api";
 axios.defaults.headers.post["Content-Type"] = "application/json";
@@ -132,6 +133,7 @@ function App() {
           <Route path="/editTenant" element={<EditTenant />} />
           <Route path="/addBlock" element={<AddBlock />} />
           <Route path="/addRoom" element={<AddRooms />} />
+          <Route path="/metre" element={<Metre/>} />
           <Route path="/todolist" element={<TodoList />} />
           <Route path="/changepassword" element={<ChangePassword />} />
           <Route path="/accounts" element={<Account />} />

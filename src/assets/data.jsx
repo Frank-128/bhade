@@ -463,3 +463,90 @@ export const chartData = [
         10,12,9,5,23.567,2.4,34,13.41,17,16,7.8,2,
     ]
 ]
+
+export const metreData = [
+    {
+        name:"Frank",
+        roomNo:1.1,
+        metreReading:24.7,
+        date:new Date(2023,1,25,0,0,0)
+    },
+    {
+        name:"Rico",
+        roomNo:1.2,
+        metreReading:3.4,
+        date:new Date(2023,2,1,0,0,0)
+    },
+    {
+        name:"Salim",
+        roomNo:1.3,
+        metreReading:14.2,
+        date:new Date(2023,8,22,0,0,0)
+    },
+    {
+        name:"Heri",
+        roomNo:1.4,
+        metreReading:10.6,
+        date:new Date(2021,0,12,0,0,0)
+    },
+    {
+        name:"Denis",
+        roomNo:1.5,
+        metreReading:4.6,
+        date:new Date(2023,7,30,0,0,0)
+    },
+    {
+        name:"Mgaya",
+        roomNo:1.6,
+        metreReading:27.9,
+        date:new Date(2022,10,2,0,0,0)
+    },
+    {
+        name:"Karata",
+        roomNo:1.7,
+        metreReading:8.96,
+        date:new Date(2023,11,10,0,0,0)
+    },
+    {
+        name:"Mchomvu",
+        roomNo:1.8,
+        metreReading:11.2,
+        date:new Date(2023,6,1,0,0,0)
+    },
+    {
+        name:"Mgaya",
+        roomNo:2.6,
+        metreReading:27.9,
+        date:new Date(2022,10,2,0,0,0)
+    },
+    {
+        name:"Karata",
+        roomNo:7.7,
+        metreReading:9.06,
+        date:new Date(2023,2,10,0,0,0)
+    },
+    {
+        name:"Rico",
+        roomNo:1.2,
+        metreReading:30.4,
+        date:new Date(2023,2,1,0,0,0)
+    },
+    {
+        name:"Salim",
+        roomNo:1.3,
+        metreReading:64.2,
+        date:new Date(2023,8,22,0,0,0)
+    },
+    {
+        name:"Rico",
+        roomNo:1.2,
+        metreReading:5.4,
+        date:new Date(2023,2,1,0,0,0)
+    },
+    {
+        name:"Salim",
+        roomNo:1.3,
+        metreReading:84.2,
+        date:new Date(2023,8,22,0,0,0)
+    },
+]
