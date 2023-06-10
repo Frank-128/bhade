@@ -20,7 +20,6 @@ import { Account } from "./pages/Account";
 import { ChangeEmail } from "./pages/ChangeEmail";
 import AddTenant from "./pages/AddTenant";
 import EditTenant from "./pages/EditTenant";
-import AddRooms from "./pages/AddRooms";
 import TodoList from "./pages/TodoList";
 import AddBlock from "./pages/AddBlock";
 import axios from "axios";
@@ -131,8 +130,7 @@ function App() {
           <Route path="/settings" element={<Setting />} />
           <Route path="/addTenant" element={<AddTenant />} />
           <Route path="/editTenant" element={<EditTenant />} />
-          <Route path="/addBlock" element={<AddBlock />} />
-          <Route path="/addRoom" element={<AddRooms />} />
+          <Route path="/addBlock" element={<AddBlock />} />    
           <Route path="/metre" element={<Metre/>} />
           <Route path="/todolist" element={<TodoList />} />
           <Route path="/changepassword" element={<ChangePassword />} />

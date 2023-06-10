@@ -1,7 +1,7 @@
 import { Input } from '@mui/material'
 import React,{useState} from 'react'
 import { Navigate } from 'react-router-dom';
-import AddRooms from './AddRooms';
+
 
 function AddBlock() {
     const [inputsValue,setInputsValue] = useState({blockNo:'',roomNo:''});

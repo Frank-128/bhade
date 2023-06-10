@@ -12,11 +12,13 @@ import BlockListItem from "./BlockListItem";
 import { blocks } from "../assets/data";
 
 
+
 function Sidebar({ isOpen,setIsOpen,activeItem,handleActive,routePath}) {
   const [miniActive,setMiniActive]= React.useState('')
   const handleMiniActive = (tab)=>{
     setMiniActive(tab)
   }
+  
   const navigate = useNavigate();
   const [openBlocks, setOpenBlocks ] = React.useState(false)
   return (
@@ -97,6 +99,19 @@ function Sidebar({ isOpen,setIsOpen,activeItem,handleActive,routePath}) {
           >
             <AddHome style={{ fontSize: "50px" }} />{" "}
             {<span className="text-xl">Add Block</span>}
+          </div>
+        </li>
+        <li>
+          <div
+            onClick={() => {handleActive("metre");navigate('/metre');setOpenBlocks(false);setOpenBlocks(false)}}
+            className={
+              activeItem === "metre"
+                ? "flex items-center bg-gray-800 p-2 cursor-pointer text-slate-300"
+                : "flex items-center  p-2 cursor-pointer "
+            }
+          >
+            <AddBox style={{ fontSize: "50px" }} />{" "}
+            {isOpen && <span className="text-xl">Metre</span>}
           </div>
         </li>
       </ul>
