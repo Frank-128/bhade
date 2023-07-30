@@ -53,6 +53,7 @@ function Skeleton() {
       setWindow23(true);
     }
   };
+ 
   
   return (
     <div onClick={handleClick} className="w-full xs:hidden  al:flex skeleton relative  h-full  flex-col">
