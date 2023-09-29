@@ -11,11 +11,13 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./../App.css";
 import { MenuList, MenuHandler, Menu } from "@material-tailwind/react";
+import { useBhadeContext } from "../context/BhadeContext";
 
 function Navbar({ isOpen, setIsOpen,handleActive }) {
   const navigate = useNavigate();
   const [openMenu, setOpenMenu] = useState(false);
   const [openSmallMenu,setOpenSmallMenu] = useState(false);
+  const {notifications} = useBhadeContext()
 
   return (
     <div className=" ">
@@ -57,7 +59,7 @@ function Navbar({ isOpen, setIsOpen,handleActive }) {
           <div className="flex items-center justify-between gap-3">
             <Menu  open={openSmallMenu} handler={setOpenSmallMenu} >
               <MenuHandler className='cursor-pointer'>
-                <Badge  badgeContent={3}>
+                <Badge  badgeContent={notifications?.length}>
                   <Notifications style={{ fontSize: "30px" }} />
                 </Badge>
               </MenuHandler>
@@ -68,13 +70,12 @@ function Navbar({ isOpen, setIsOpen,handleActive }) {
                 
                    
                     <ul className="gap-y-2 flex-col max-h-[12rem] sm:max-h-[15rem] outline-none  flex overflow-y-scroll mt-4 hideScroll">
-                      {Array(10)
-                        .fill()
-                        .map((_, i) => (
+                      {notifications
+                        .map((item, i) => (
                           <li className="  border-b-[0.2px]   ">
                             {" "}
                             <p className="p-3">
-                              1. franklin saint rent due is by today
+                             {item.task.name}
                             </p>{" "}
                           </li>
                         ))}
@@ -129,7 +130,7 @@ function Navbar({ isOpen, setIsOpen,handleActive }) {
         <div className="flex justify-between  gap-4">
         <Menu   open={openMenu} handler={setOpenMenu} allowHover>
               <MenuHandler className='cursor-pointer '>
-                <Badge  badgeContent={3}>
+                <Badge  badgeContent={notifications?.length} color="info">
                   <Notifications style={{ fontSize: "30px" }} />
                 </Badge>
               </MenuHandler>
@@ -140,13 +141,12 @@ function Navbar({ isOpen, setIsOpen,handleActive }) {
                 
                    
                     <ul className="gap-y-2 flex-col max-h-[15rem] outline-none  flex overflow-y-scroll mt-4 hideScroll">
-                      {Array(10)
-                        .fill()
-                        .map((_, i) => (
+                      {notifications
+                        .map((item, i) => (
                           <li className="  border-b-[0.2px]   ">
                             {" "}
                             <p className="p-3">
-                              1. franklin saint rent due is by today
+                             {item.task.name}
                             </p>{" "}
                           </li>
                         ))}

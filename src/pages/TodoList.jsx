@@ -6,15 +6,20 @@ import { Add } from "@mui/icons-material";
 import { TextField } from "@mui/material";
 import { Card, CardHeader, Dialog,CardBody,Input,Button, CardFooter, Typography } from "@material-tailwind/react";
 import DialogWithForm from "../components/TodoDialogBox";
+import axios from "axios";
+import { useBhadeContext } from "../context/BhadeContext";
 
 
 function TodoList() {
   const [activeTab, setActiveTab] = useState("tab1");
   const [open,setOpen] = useState(false)
-
+  const {todoes} = useBhadeContext()
   const handleClick = (tab) => {
     setActiveTab(tab);
   };
+
+ 
+
   return (
     <div className="flex flex-col h-screen ml:w-full al:w-screen">
       <div className="flex justify-between bg-gray-100">
@@ -51,12 +56,12 @@ function TodoList() {
        </div>
       </div>
       <div className="bg-slate-200  h-screen overflow-y-scroll">
-        {activeTab === "tab1" && <Tasks task={"all"} />}
-        {activeTab === "tab2" && <Tasks task={"complete"} />}
-        {activeTab === "tab3" && <Tasks task={"pending"} />}
+        {activeTab === "tab1" && <Tasks task={"all"}  />}
+        {activeTab === "tab2" && <Tasks task={"complete"}  />}
+        {activeTab === "tab3" && <Tasks task={"pending"}  />}
       </div>
    
-          <DialogWithForm open={open} setOpen={setOpen}/>
+          <DialogWithForm open={open}  setOpen={setOpen}/>
      
     </div>
   );
